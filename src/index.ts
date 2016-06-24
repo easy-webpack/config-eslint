@@ -5,7 +5,7 @@ import * as path from 'path'
  * Tslint loader support for *.ts files
  * See: https://github.com/wbuchwalter/tslint-loader
  */
-export = function eslint({options = {}, exclude = null}) {
+export = function eslint({options = {}, exclude = null} = {}) {
   return function eslint(this: WebpackConfig): WebpackConfig {
     return {
       module: {
