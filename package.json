@@ -49,7 +49,7 @@
     "eslint-loader": "^1.3.0"
   },
   "peerDependencies": {
-    "@easy-webpack/core": "*"
+    "@easy-webpack/core": "1.4.1"
   },
   "ava": {
     "files": [
