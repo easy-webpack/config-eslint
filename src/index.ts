@@ -10,7 +10,7 @@ export = function eslint({options = {}, exclude = null} = {}) {
     return {
       module: {
         rules: get(this, 'module.rules', []).concat([
-          { test: /\.jsx?$/, loader: 'eslint', enforce: 'pre', exclude: exclude || (this.metadata.root ? [path.join(this.metadata.root, 'node_modules')] : []) }
+          { test: /\.jsx?$/, loader: 'eslint-loader', enforce: 'pre', exclude: exclude || (this.metadata.root ? [path.join(this.metadata.root, 'node_modules')] : []) }
         ])
       },
       eslint: options
