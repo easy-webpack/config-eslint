@@ -2,7 +2,7 @@ import {WebpackConfigWithMetadata, get} from '@easy-webpack/core'
 import * as path from 'path'
 
 /**
- * Tslint loader support for *.ts files
+ * Eslint loader support for *.js files
  * See: https://github.com/wbuchwalter/tslint-loader
  */
 export = function eslint({options = {}, exclude = null} = {}) {
