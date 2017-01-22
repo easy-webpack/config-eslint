@@ -18,7 +18,11 @@ module.exports = generateConfig(
   baseConfig,
 
   require('@easy-webpack/config-eslint')
-    ({ /* Options object */ fix: true, cache: true }, /* Exclude */ /(node_modules|bower_components)/)
+    ({
+      /* Option object */
+      options: { fix: true, cache: true },
+      exclude: /(node_modules|bower_components)/
+    })
 );
 
 // .eslintrc.json
@@ -41,9 +45,17 @@ module.exports = generateConfig(
 ```
 
 # Options
-The first parameter will be passed into eslint-loader directly. Read [their documentation](https://github.com/MoOx/eslint-loader#options) for details.
+### options
+Type: `Object` Default: `{}`
 
-The second parameter is the exclude files matcher. Default: `node_modules`.
+`options` _is_ a key in the options object.
+
+This will be passed into eslint-loader directly. Read [their documentation](https://github.com/MoOx/eslint-loader#options) for details.
+
+### exclude
+Type: `(Array of) Webpack Exclude object` Default: `node_modules`
+
+Files to be excluded from eslint checking.
 
 Check [webpack documentation](https://webpack.js.org/configuration/module/#condition) on how to write valid exclude files.
 
