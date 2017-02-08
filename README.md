@@ -1,4 +1,6 @@
 # @easy-webpack/config-eslint
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/easy-webpack/config-eslint.svg)](https://greenkeeper.io/)
 Lint JavaScript files using [eslint](http://eslint.org/) and [eslint-loader](https://github.com/MoOx/eslint-loader).
 
 # Installation
